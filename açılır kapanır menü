@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Açılır(Dropdown) Menü Yapımı</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        ul li a {
+            text-decoration: none;
+            color: rgb(104, 133, 158);
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        ul li {
+            list-style-type: none;
+            background-color: lightblue;
+            width: 100px;
+            display: inline-block;
+            
+        }
+        
+
+        ul li:hover {
+            background-color: rgb(143, 196, 143);
+            transition: 0.7s;
+        }
+
+        ul li {
+            padding: 10px;
+        }
+
+        ul {
+            background-color: lightblue;
+            width: 100%;
+        }
+
+        i {
+            padding-right: 10px;
+            color: black;
+        }
+
+        #news-dp {
+            position: absolute;
+            z-index: 1;
+            display: none;
+            width: 10px;
+            margin-left: -10px;
+            margin-top: 10px;
+        }
+
+        .news-değince:hover #news-dp {
+            display: block;
+        }
+
+        #news4-dp {
+            position: absolute;
+            z-index: 1;
+            display: none;
+            width: 10px;
+            margin-top: -30px;
+            margin-left: 110px;
+        }
+
+        .news4-değince:hover #news4-dp {
+            display: block;
+        }
+        #news4-dp ul li{
+            width: 100px;
+            margin-left: -40px;
+        }
+        #news-dp ul li{
+            width: 100px;
+            margin-left: -40px;
+        
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <ul>
+        <li>
+            <a href=""><i class="fa-solid fa-house"></i>Home</a>
+        </li>
+
+        <li class="news-değince">
+            <a href=""><i class="fa-solid fa-newspaper"></i>News</a>
+            <div id="news-dp">
+                <ul>
+                    <li style="display: block;"><a href="">news 1</a></li>
+                    <li style="display: block;"><a href="">news 2</a></li>
+                    <li style="display: block;"><a href=""> news3</a></li>
+                    <li class="news4-değince" style="display: block;"><a href=""> news4</a>
+                        <div id="news4-dp">
+                            <ul>
+                                <li ><a href="">detail 1</a></li>
+                                <li><a href="">detail 2</a></li>
+                            </ul>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li><a href=""><i class="fa-solid fa-address-book"></i>Contact</a></li>
+        <li><a href=""><i class="fa-solid fa-address-card"></i>About</a></li>
+    </ul>
+
+</body>
+
+</html>
